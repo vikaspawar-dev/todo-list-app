@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    transition: 0.3s;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Toggle */
+#themeToggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Input */
+.input-box {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* List */
+ul {
+    margin-top: 20px;
+}
+
+li {
+    list-style: none;
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+
+    border-radius: 8px;
+
+    animation: fadeIn 0.3s ease;
+
+    touch-action: pan-y;
+    position: relative;
+}
+
+/* Text */
+li p {
+    flex: 1 1 100%;
+}
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+
+.editBtn {
+    color: blue;
+}
+
+.deleteBtn {
+    color: red;
+}
+
+/* Completed */
+.completed p {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0; transform: translateX(100px);}
+}
+
+.removing {
+    animation: fadeOut 0.3s forwards;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark li {
+    background: #1e1e1e;
+}
+
+body.dark .editBtn {
+    color: #60a5fa;
+}
+
+body.dark .deleteBtn {
+    color: #f87171;
+}
+
+/* Mobile */
+@media(max-width: 500px) {
+    .input-box {
+        flex-direction: column;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
