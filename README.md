@@ -33,8 +33,8 @@ This app helps users manage daily tasks efficiently with a clean UI and smooth u
 
 ## 📸 Screenshot
 
-![App Screenshot](screenshot1.png)
-![App Screenshot](screenshot2.png)
+![App Screenshot](screenshot.png)
+
 ---
 
 ## 📂 Project Structure
